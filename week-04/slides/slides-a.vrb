@@ -1,0 +1,13 @@
+\frametitle{The two core filters in code}
+\begin{lstlisting}[language=Python]
+import cv2
+gauss  = cv2.GaussianBlur(noisy, (5,5), 0)   # grain / Gaussian noise
+median = cv2.medianBlur(noisy, 3)            # salt-and-pepper specks
+
+# diagnose first: peek at a flat patch
+patch = noisy[y:y+15, x:x+15]
+print(patch.std())   # wide spread -> Gaussian; 0/255 spikes -> impulse
+\end{lstlisting}
+  \begin{infobox}
+    Try median first for specks; averaging/Gaussian for grain. Measure, don't guess — Session 2 shows how (PSNR/SSIM).
+  \end{infobox}

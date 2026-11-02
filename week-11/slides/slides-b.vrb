@@ -1,0 +1,13 @@
+\frametitle{The automatic variant, annotated}
+\begin{lstlisting}[language=Python]
+orb = cv2.ORB_create(2000)
+k1,d1 = orb.detectAndCompute(template, None)
+k2,d2 = orb.detectAndCompute(photo, None)
+matches = matcher.match(d1, d2)              # some are wrong
+src = np.float32([k1[m.queryIdx].pt for m in matches])
+dst = np.float32([k2[m.trainIdx].pt for m in matches])
+H, mask = cv2.findHomography(dst, src, cv2.RANSAC, 3.0)
+print("inliers:", int(mask.sum()), "/", len(matches))
+scan = cv2.warpPerspective(photo, H, template.shape[1::-1])
+\end{lstlisting}
+  \code{mask} flags the inliers; the printed ratio is your confidence the alignment is good.

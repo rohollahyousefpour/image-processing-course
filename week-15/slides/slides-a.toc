@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{From one digit to a string}{4}{0}{1}
+\beamer@sectionintoc {2}{The end-to-end view}{13}{0}{2}
+\beamer@sectionintoc {3}{In-class exercise}{23}{0}{3}
+\beamer@sectionintoc {4}{Wrap-up}{26}{0}{4}

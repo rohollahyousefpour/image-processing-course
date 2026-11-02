@@ -1,0 +1,17 @@
+\frametitle{The training loop}
+\begin{lstlisting}[language=Python]
+opt = torch.optim.Adam(net.parameters(), lr=1e-3)
+loss_fn = nn.CrossEntropyLoss()
+for epoch in range(60):
+    for xb, yb in train_loader:      # mini-batches of 128
+        opt.zero_grad()              # clear old gradients
+        logits = net(xb)             # forward pass
+        loss = loss_fn(logits, yb)   # cross-entropy
+        loss.backward()              # backprop: fill gradients
+        opt.step()                   # gradient-descent update
+\end{lstlisting}
+  \begin{itemize}
+    \item Every line maps to a step from the first training slide: forward, loss, backprop, update.
+    \item \code{CrossEntropyLoss} does softmax + $-\log p_{\text{true}}$ in one call.
+    \item Forgetting \code{zero\_grad()} silently accumulates gradients --- a classic bug.
+  \end{itemize}

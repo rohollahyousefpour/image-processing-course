@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Fine-tuning: the deeper option}{4}{0}{1}
+\beamer@sectionintoc {2}{The DocScan capstone}{8}{0}{2}
+\beamer@sectionintoc {3}{Engineering for the real world}{13}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{18}{0}{4}
+\beamer@sectionintoc {5}{Course wrap-up}{23}{0}{5}
+\beamer@sectionintoc {6}{The deliverable}{29}{0}{6}

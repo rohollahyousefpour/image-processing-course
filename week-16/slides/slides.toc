@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{The small-data problem}{4}{0}{1}
+\beamer@sectionintoc {2}{Transfer learning}{7}{0}{2}
+\beamer@sectionintoc {3}{The DocScan capstone}{16}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{20}{0}{4}
+\beamer@sectionintoc {5}{Course wrap-up}{23}{0}{5}

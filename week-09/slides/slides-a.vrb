@@ -1,0 +1,13 @@
+\frametitle{Cropping \& ordering in code}
+\begin{lstlisting}[language=Python]
+boxes = [cv2.boundingRect(c) for c in contours]
+boxes = sorted(boxes, key=lambda b: b[0])   # sort by x (left to right)
+digits = [gray[y:y+h, x:x+w] for (x, y, w, h) in boxes]
+\end{lstlisting}
+  \begin{itemize}
+    \item Sorting by $x$ gives the number in reading order — no OCR needed yet.
+    \item For multi-row layouts, sort by $(\text{row band}, x)$: group by $y$ first, then $x$ within a row.
+  \end{itemize}
+  \begin{infobox}[Tie-break]
+    If two boxes share an $x$, add $y$ as a secondary key: \code{key=lambda b:(b[0],b[1])}.
+  \end{infobox}

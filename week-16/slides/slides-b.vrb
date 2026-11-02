@@ -1,0 +1,16 @@
+\frametitle{The pipeline as one function (code)}
+\begin{lstlisting}
+def docscan(photo):
+    warped = rectify(photo)                 # W11: homography + RANSAC
+    if warped.inliers < 12:                 # confidence gate
+        return Reject("blurry / bad angle - retake")
+    binary = clean(warped.image)            # W2/7/8: threshold + morphology
+    boxes  = segment_digits(binary)         # W9: contours -> ordered boxes
+    if len(boxes) != EXPECTED_DIGITS:       # sanity check
+        return Reject("wrong digit count")
+    digits = [read_digit(b) for b in boxes] # W13 / transfer features
+    return "".join(d.label for d in digits)
+\end{lstlisting}
+  \begin{itemize}
+    \item Each helper is a week of the course; the glue is engineering.
+  \end{itemize}

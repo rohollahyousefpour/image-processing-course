@@ -1,0 +1,81 @@
+% ===================================================================
+%  Shared Beamer preamble for "Practical Image Processing"
+%  English slides. Compile with pdfLaTeX.
+% ===================================================================
+
+\usetheme{metropolis}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{fontawesome5}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,backgrounds,matrix}
+\tcbuselibrary{skins,breakable}
+
+% ---- Palette --------------------------------------------------------
+\definecolor{coursePrimary}{HTML}{1B4965}   % deep blue
+\definecolor{courseAccent}{HTML}{E76F51}    % coral
+\definecolor{courseGood}{HTML}{2A9D8F}      % teal
+\definecolor{courseBad}{HTML}{C0392B}       % red
+\definecolor{courseInfo}{HTML}{2980B9}      % blue
+\definecolor{codeBg}{HTML}{F5F6FA}
+\definecolor{codeKw}{HTML}{8E44AD}
+\definecolor{codeStr}{HTML}{2A9D8F}
+\definecolor{codeCom}{HTML}{7F8C8D}
+
+\setbeamercolor{frametitle}{bg=coursePrimary}
+\setbeamercolor{progress bar}{fg=courseAccent}
+\setbeamercolor{alerted text}{fg=courseAccent}
+\metroset{block=fill,sectionpage=progressbar,numbering=fraction}
+
+% ---- Code listings (Python is built into listings) -----------------
+\lstdefinestyle{course}{
+  backgroundcolor=\color{codeBg},
+  basicstyle=\ttfamily\scriptsize,
+  keywordstyle=\color{codeKw}\bfseries,
+  stringstyle=\color{codeStr},
+  commentstyle=\color{codeCom}\itshape,
+  numberstyle=\tiny\color{codeCom},
+  numbers=left, numbersep=6pt,
+  showstringspaces=false, breaklines=true, breakatwhitespace=true,
+  tabsize=4, columns=fullflexible,
+  frame=single, framesep=4pt, rulecolor=\color{gray!30},
+  keepspaces=true, upquote=true, language=Python,
+}
+\lstset{style=course}
+\lstdefinelanguage{bash}{
+  keywords={cd,pip,python,venv,source,import}, sensitive=true,
+  morecomment=[l]{\#}, morestring=[b]', morestring=[b]",
+}
+
+% ---- Reusable callout boxes ----------------------------------------
+\newtcolorbox{goodbox}[1][Good practice]{colback=courseGood!8,colframe=courseGood,
+  fonttitle=\bfseries,title={\faCheck~#1},boxrule=0.6pt,left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{badbox}[1][Pitfall]{colback=courseBad!8,colframe=courseBad,
+  fonttitle=\bfseries,title={\faTimes~#1},boxrule=0.6pt,left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{infobox}[1][Note]{colback=courseInfo!8,colframe=courseInfo,
+  fonttitle=\bfseries,title={\faInfoCircle~#1},boxrule=0.6pt,left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{mathbox}[1][Math]{colback=coursePrimary!6,colframe=coursePrimary,
+  fonttitle=\bfseries,title={\faCalculator~#1},boxrule=0.6pt,left=4pt,right=4pt,top=3pt,bottom=3pt}
+
+\newcommand{\keyidea}[1]{\begin{alertblock}{Key idea}#1\end{alertblock}}
+\newcommand{\term}[1]{\textbf{\color{coursePrimary}#1}}
+\newcommand{\code}[1]{\lstinline[basicstyle=\ttfamily\small]|#1|}
+
+% ---- A helper to draw a small pixel grid, cells shaded by value ----
+% \pixelgrid{ {10,20,120,200,240}, {30,60,130,180,230}, ... }
+\newcommand{\pixelgrid}[1]{%
+  \begin{tikzpicture}[font=\scriptsize,scale=0.6]
+    \foreach \row [count=\ry] in {#1} {
+      \foreach \val [count=\cx] in \row {
+        \draw[gray,fill=coursePrimary!8] (\cx,-\ry) rectangle ++(1,-1);
+        \node at (\cx+0.5,-\ry-0.5) {\val};
+      }
+    }
+  \end{tikzpicture}}

@@ -1,0 +1,10 @@
+\frametitle{Matching with the ratio test}
+\begin{lstlisting}[language=Python]
+bf = cv2.BFMatcher(cv2.NORM_HAMMING)          # no crossCheck for kNN
+knn = bf.knnMatch(des1, des2, k=2)            # 2 nearest per descriptor
+good = [m for m, n in knn if m.distance < 0.75 * n.distance]
+print(len(good), "good matches after Lowe's ratio test")
+\end{lstlisting}
+  \begin{goodbox}
+    Use \code{knnMatch} + ratio test \emph{or} \code{crossCheck=True} — not both at once.
+  \end{goodbox}

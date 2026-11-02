@@ -1,0 +1,13 @@
+\frametitle{Hyper-parameter tuning with grid search}
+\begin{lstlisting}[language=Python]
+from sklearn.model_selection import GridSearchCV
+grid = {'svc__C': [0.1, 1, 10, 100],
+        'svc__gamma': ['scale', 0.01, 0.001]}
+gs = GridSearchCV(svm, grid, cv=5)   # 5-fold CV inside train
+gs.fit(Xtr, ytr)
+print(gs.best_params_)               # chosen WITHOUT the test set
+print(gs.score(Xte, yte))            # test used ONCE, at the end
+\end{lstlisting}
+  \begin{badbox}
+    Never put \code{Xte} inside \code{GridSearchCV}. Tuning on the test set is how honest projects quietly cheat.
+  \end{badbox}

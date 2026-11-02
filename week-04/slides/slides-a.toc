@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Noise models}{4}{0}{1}
+\beamer@sectionintoc {2}{Averaging \& Gaussian smoothing}{12}{0}{2}
+\beamer@sectionintoc {3}{The median filter}{19}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{27}{0}{4}
+\beamer@sectionintoc {5}{Wrap-up}{30}{0}{5}

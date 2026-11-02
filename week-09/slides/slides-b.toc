@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Convex hull \& convexity}{4}{0}{1}
+\beamer@sectionintoc {2}{Shape descriptors}{8}{0}{2}
+\beamer@sectionintoc {3}{Hu moments \& matching}{15}{0}{3}
+\beamer@sectionintoc {4}{Approximation \& hierarchy}{19}{0}{4}
+\beamer@sectionintoc {5}{Deep dive}{25}{0}{5}
+\beamer@sectionintoc {6}{In-class exercise}{32}{0}{6}
+\beamer@sectionintoc {7}{Wrap-up \& deliverable}{35}{0}{7}

@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{From point ops to neighbourhoods}{4}{0}{1}
+\beamer@sectionintoc {2}{Convolution}{6}{0}{2}
+\beamer@sectionintoc {3}{Smoothing}{17}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{26}{0}{4}
+\beamer@sectionintoc {5}{Wrap-up}{29}{0}{5}

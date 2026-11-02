@@ -1,0 +1,15 @@
+\frametitle{Components with stats --- crop each digit}
+\begin{lstlisting}[language=Python]
+n, labels, stats, cents = cv2.connectedComponentsWithStats(
+        binary, connectivity=8)
+digits = []
+for i in range(1, n):                       # 0 is background
+    x, y, w, h, area = stats[i]
+    if area < 40:                           # drop specks
+        continue
+    digits.append(binary[y:y+h, x:x+w])     # one cropped digit
+digits.sort(key=lambda d: d.shape)          # (then order by x)
+\end{lstlisting}
+  \begin{itemize}
+    \item \code{stats} gives x, y, w, h, area per label; \code{cents} the centroids.
+  \end{itemize}

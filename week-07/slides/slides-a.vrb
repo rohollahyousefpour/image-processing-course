@@ -1,0 +1,9 @@
+\frametitle{The four operations in code}
+\begin{lstlisting}[language=Python]
+k = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+er = cv2.erode(binary, k, iterations=1)          # shrink
+di = cv2.dilate(binary, k, iterations=1)         # grow
+op = cv2.morphologyEx(binary, cv2.MORPH_OPEN,  k)  # remove specks
+cl = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, k)  # fill gaps
+\end{lstlisting}
+  \code{morphologyEx} wraps open/close (and more, next session) in one call.

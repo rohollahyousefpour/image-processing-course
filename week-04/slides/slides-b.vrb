@@ -1,0 +1,12 @@
+\frametitle{Edge-preserving filters in code}
+\begin{lstlisting}[language=Python]
+import cv2
+# bilateral: d=9 window, sigmaColor=60 (range), sigmaSpace=60 (spatial)
+bilateral = cv2.bilateralFilter(noisy, 9, 60, 60)
+
+# non-local means: h=15 strength, templateWindow=7, searchWindow=21
+nlm = cv2.fastNlMeansDenoising(noisy, None, 15, 7, 21)
+\end{lstlisting}
+  \begin{infobox}
+    Bigger \code{sigmaColor}/\code{h} = stronger denoising but more lost detail. Tune on \emph{your} hard images, then measure.
+  \end{infobox}

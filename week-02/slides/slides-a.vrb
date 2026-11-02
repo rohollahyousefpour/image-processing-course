@@ -1,0 +1,10 @@
+\frametitle{The three, in code}
+\begin{lstlisting}[language=Python]
+stretch = cv2.normalize(gray, None, 0, 255, cv2.NORM_MINMAX)
+equalized = cv2.equalizeHist(gray)
+lut = np.array([((i/255)**(1/0.5))*255 for i in range(256)], np.uint8)
+gamma = cv2.LUT(gray, lut)                 # gamma = 0.5
+\end{lstlisting}
+  \begin{infobox}
+    \code{cv2.LUT} applies a 256-entry table to every pixel in one fast pass — the pattern for any point op.
+  \end{infobox}

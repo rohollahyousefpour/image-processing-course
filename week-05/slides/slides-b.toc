@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Why a raw gradient isn't enough}{4}{0}{1}
+\beamer@sectionintoc {2}{Step by step}{7}{0}{2}
+\beamer@sectionintoc {3}{Canny in practice}{13}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{20}{0}{4}
+\beamer@sectionintoc {5}{Deep dive}{23}{0}{5}
+\beamer@sectionintoc {6}{DocScan \& wrap-up}{28}{0}{6}

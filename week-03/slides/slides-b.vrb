@@ -1,0 +1,10 @@
+\frametitle{Filtering in code — the full toolbox}
+\begin{lstlisting}[language=Python]
+box    = cv2.blur(img, (5, 5))
+gauss  = cv2.GaussianBlur(img, (7, 7), 1.5)
+median = cv2.medianBlur(img, 3)             # nonlinear, impulse noise
+bilat  = cv2.bilateralFilter(img, 9, 75, 75)# edge-preserving smooth
+k = np.array([[0,-1,0],[-1,5,-1],[0,-1,0]])
+sharp  = cv2.filter2D(img, -1, k)           # any custom kernel
+\end{lstlisting}
+  \code{cv2.filter2D} convolves with any kernel you give it — the general tool the others are shortcuts for.

@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Edge-preserving filters}{4}{0}{1}
+\beamer@sectionintoc {2}{Adaptive \& order-statistic filters}{12}{0}{2}
+\beamer@sectionintoc {3}{Temporal denoising}{16}{0}{3}
+\beamer@sectionintoc {4}{Measuring restoration}{19}{0}{4}
+\beamer@sectionintoc {5}{Deblurring \& practice}{25}{0}{5}
+\beamer@sectionintoc {6}{Wrap-up \& deliverable}{32}{0}{6}

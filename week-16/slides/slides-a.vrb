@@ -1,0 +1,15 @@
+\frametitle{Augmentation, in practice (code)}
+\begin{lstlisting}
+aug = T.Compose([
+    T.RandomHorizontalFlip(p=0.5),
+    T.RandomRotation(8),                 # small: a car is still a car
+    T.ColorJitter(brightness=0.2, contrast=0.2),
+    T.RandomResizedCrop(224, scale=(0.8, 1.0)),
+])
+# make 5 augmented copies per training image, extract features on each
+X = np.stack([features(aug(im)) for im in train_images for _ in range(5)])
+\end{lstlisting}
+  \begin{badbox}
+    Only augment \emph{training} data, and only with label-preserving transforms — a vertical
+    flip of a digit ``6'' is a lie.
+  \end{badbox}

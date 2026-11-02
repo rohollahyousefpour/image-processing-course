@@ -1,0 +1,15 @@
+\frametitle{Building the circular mask}
+\begin{lstlisting}[language=Python]
+def make_circle_mask(shape, r):
+    H, W = shape
+    cy, cx = H // 2, W // 2                 # centre = DC after fftshift
+    Y, X = np.ogrid[:H, :W]
+    D = np.sqrt((X - cx)**2 + (Y - cy)**2)  # distance from centre
+    return (D <= r).astype(float)           # 1 inside the disc, 0 outside
+# high-pass is just the complement:
+hp = 1.0 - make_circle_mask(gray.shape, r=30)
+\end{lstlisting}
+  \begin{infobox}
+    Swap \code{D <= r} for a Gaussian \code{np.exp(-(D**2)/(2*r**2))} to get a smooth,
+    ring-free roll-off.
+  \end{infobox}

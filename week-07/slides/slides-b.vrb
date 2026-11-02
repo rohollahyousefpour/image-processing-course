@@ -1,0 +1,8 @@
+\frametitle{All the operators in one call}
+\begin{lstlisting}[language=Python]
+k     = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+grad  = cv2.morphologyEx(binary, cv2.MORPH_GRADIENT, k)   # outline
+top   = cv2.morphologyEx(gray,   cv2.MORPH_TOPHAT,   big_k) # lighting fix
+black = cv2.morphologyEx(gray,   cv2.MORPH_BLACKHAT, big_k) # dark details
+\end{lstlisting}
+  \code{morphologyEx} covers open/close/gradient/top-hat/black-hat with one flag.

@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Training the classifier}{4}{0}{1}
+\beamer@sectionintoc {2}{Evaluating honestly}{8}{0}{2}
+\beamer@sectionintoc {3}{Doing it right}{17}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{22}{0}{4}
+\beamer@sectionintoc {5}{The limit of hand-crafted features}{25}{0}{5}
+\beamer@sectionintoc {6}{Wrap-up \& deliverable}{30}{0}{6}

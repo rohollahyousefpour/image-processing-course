@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{From regions to objects}{4}{0}{1}
+\beamer@sectionintoc {2}{Basic measurements}{11}{0}{2}
+\beamer@sectionintoc {3}{Boxes → crop, order, and filter}{20}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{26}{0}{4}
+\beamer@sectionintoc {5}{Wrap-up}{29}{0}{5}

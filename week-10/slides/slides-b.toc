@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Building descriptors}{4}{0}{1}
+\beamer@sectionintoc {2}{Matching descriptors}{11}{0}{2}
+\beamer@sectionintoc {3}{Rejecting bad matches}{17}{0}{3}
+\beamer@sectionintoc {4}{Scale invariance \& applications}{22}{0}{4}
+\beamer@sectionintoc {5}{In-class exercise}{27}{0}{5}
+\beamer@sectionintoc {6}{Wrap-up \& deliverable}{30}{0}{6}

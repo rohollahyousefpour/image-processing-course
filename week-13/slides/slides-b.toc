@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Training a CNN}{4}{0}{1}
+\beamer@sectionintoc {2}{Results}{14}{0}{2}
+\beamer@sectionintoc {3}{Deep dive}{18}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{27}{0}{4}
+\beamer@sectionintoc {5}{Wrap-up}{30}{0}{5}

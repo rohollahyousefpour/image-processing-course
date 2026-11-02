@@ -1,0 +1,13 @@
+\frametitle{Auto-Canny: thresholds from the median}
+\begin{lstlisting}[language=Python]
+import numpy as np
+def auto_canny(img, sigma=0.33):
+    v = np.median(img)
+    lo = int(max(0,   (1.0 - sigma) * v))    # ~0.66 * median
+    hi = int(min(255, (1.0 + sigma) * v))    # ~1.33 * median
+    return cv2.Canny(img, lo, hi)
+\end{lstlisting}
+  \begin{itemize}
+    \item Fixed thresholds fail across lightings; derive them from the image's own median.
+    \item A robust starting recipe — then fine-tune \code{sigma} on hard images.
+  \end{itemize}

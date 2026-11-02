@@ -1,0 +1,13 @@
+\frametitle{\faPen ~In-class exercise (10 min)}
+\begin{infobox}[Blur by hand]
+  \end{infobox}
+  A 3$\times$3 patch with one bright speck, and the box kernel:
+  \[
+  P=\begin{bmatrix}10&10&10\\10&250&10\\10&10&10\end{bmatrix}\qquad
+  K=\tfrac{1}{9}\begin{bmatrix}1&1&1\\1&1&1\\1&1&1\end{bmatrix}
+  \]
+  \begin{enumerate}
+    \item Compute the box-blur output for the centre pixel.
+    \item By how much did the speck's value drop? What does that tell you about box blur and noise?
+    \item Would a $\tfrac{1}{16}[1,2,1;2,4,2;1,2,1]$ Gaussian give a higher or lower centre value? Why?
+  \end{enumerate}

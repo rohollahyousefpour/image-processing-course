@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Thresholding}{4}{0}{1}
+\beamer@sectionintoc {2}{Adaptive thresholding}{13}{0}{2}
+\beamer@sectionintoc {3}{Advanced enhancement}{17}{0}{3}
+\beamer@sectionintoc {4}{Color}{23}{0}{4}
+\beamer@sectionintoc {5}{In-class exercise}{26}{0}{5}
+\beamer@sectionintoc {6}{Putting it together}{29}{0}{6}
+\beamer@sectionintoc {7}{Wrap-up}{32}{0}{7}

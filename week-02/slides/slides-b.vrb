@@ -1,0 +1,16 @@
+\frametitle{The value-channel pipeline}
+\begin{center}
+  \begin{tikzpicture}[font=\scriptsize,node distance=5mm]
+    \node[draw,rounded corners,fill=coursePrimary!10] (bgr) {BGR};
+    \node[draw,rounded corners,fill=courseInfo!12,right=of bgr] (hsv) {HSV};
+    \node[draw,rounded corners,fill=courseAccent!15,right=of hsv] (v) {enhance V};
+    \node[draw,rounded corners,fill=courseGood!12,right=of v] (back) {back to BGR};
+    \draw[-{Latex}] (bgr)--(hsv);\draw[-{Latex}] (hsv)--(v);\draw[-{Latex}] (v)--(back);
+  \end{tikzpicture}
+  \end{center}
+\begin{lstlisting}[language=Python]
+hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+h, s, v = cv2.split(hsv)
+v = cv2.createCLAHE(2.0, (8, 8)).apply(v)     # enhance value only
+out = cv2.cvtColor(cv2.merge([h, s, v]), cv2.COLOR_HSV2BGR)
+\end{lstlisting}

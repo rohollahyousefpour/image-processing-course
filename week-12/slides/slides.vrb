@@ -1,0 +1,10 @@
+\frametitle{The whole ML pipeline in code}
+\begin{lstlisting}[language=Python]
+X = [hog(gray(img)) for img in images]      # features
+Xtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.3,
+                                      stratify=y)
+clf = SVC(kernel='rbf', C=10).fit(Xtr, ytr) # learn
+print(accuracy_score(yte, clf.predict(Xte)))# HONEST score
+print(confusion_matrix(yte, clf.predict(Xte)))
+\end{lstlisting}
+  Extract features $\rightarrow$ split $\rightarrow$ fit $\rightarrow$ evaluate on unseen data. Always in that order.

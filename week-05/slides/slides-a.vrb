@@ -1,0 +1,12 @@
+\frametitle{Computing the gradient in OpenCV}
+\begin{lstlisting}[language=Python]
+gx = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=3)   # d/dx
+gy = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=3)   # d/dy
+mag  = cv2.magnitude(gx, gy)                       # sqrt(gx^2 + gy^2)
+ang  = cv2.phase(gx, gy, angleInDegrees=True)      # direction
+mag8 = cv2.convertScaleAbs(mag)                    # back to 0..255 for display
+\end{lstlisting}
+  \begin{badbox}
+    Use a \emph{signed} type (\code{CV_64F}). On \code{uint8} the negative half of every edge is
+    clipped to 0 — you lose one side of each edge.
+  \end{badbox}

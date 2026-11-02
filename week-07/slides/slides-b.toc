@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Derived operators}{4}{0}{1}
+\beamer@sectionintoc {2}{Grayscale morphology}{8}{0}{2}
+\beamer@sectionintoc {3}{Structuring-element design}{11}{0}{3}
+\beamer@sectionintoc {4}{The cleanup pipeline}{16}{0}{4}
+\beamer@sectionintoc {5}{In-class exercise}{24}{0}{5}
+\beamer@sectionintoc {6}{Wrap-up \& deliverable}{27}{0}{6}

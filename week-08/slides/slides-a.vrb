@@ -1,0 +1,13 @@
+\frametitle{k-means in code}
+\begin{lstlisting}[language=Python]
+Z = img.reshape((-1, 3)).astype("float32")   # N x 3 (RGB)
+crit = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 20, 1.0)
+k = 4
+_, labels, centers = cv2.kmeans(Z, k, None, crit, 10,
+                                cv2.KMEANS_RANDOM_CENTERS)
+seg = centers[labels.flatten()].reshape(img.shape).astype("uint8")
+\end{lstlisting}
+  \begin{itemize}
+    \item \code{labels} is the cluster id per pixel; \code{centers} the $k$ mean colours.
+    \item Run several inits (\code{attempts=10}) and keep the lowest-error one.
+  \end{itemize}

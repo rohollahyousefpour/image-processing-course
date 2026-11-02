@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Why segmentation}{4}{0}{1}
+\beamer@sectionintoc {2}{Threshold-based segmentation}{7}{0}{2}
+\beamer@sectionintoc {3}{Region-based segmentation}{16}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{26}{0}{4}
+\beamer@sectionintoc {5}{Wrap-up}{29}{0}{5}

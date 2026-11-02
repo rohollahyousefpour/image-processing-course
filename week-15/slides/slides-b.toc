@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{The CRNN in detail}{4}{0}{1}
+\beamer@sectionintoc {2}{CTC: training without alignment}{10}{0}{2}
+\beamer@sectionintoc {3}{Decoding \& evaluation}{16}{0}{3}
+\beamer@sectionintoc {4}{Code walkthrough}{23}{0}{4}
+\beamer@sectionintoc {5}{In-class exercise}{28}{0}{5}
+\beamer@sectionintoc {6}{Wrap-up}{31}{0}{6}

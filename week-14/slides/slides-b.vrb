@@ -1,0 +1,15 @@
+\frametitle{Localizing the digit strip (the DocScan tie-in)}
+\begin{lstlisting}[language=Python]
+# score every sliding window, then clean up with NMS
+boxes, scores = [], []
+for (x, y, w, h) in slide(img, win=(120, 40), stride=8):
+    s = strip_score(img[y:y+h, x:x+w])   # "looks like a digit strip?"
+    if s > 0.6:
+        boxes.append((x, y, x+w, y+h)); scores.append(s)
+keep = nms(boxes, scores, tau=0.4)       # collapse the cluster
+strip = boxes[keep[0]]                    # feed this crop to Week 13's reader
+\end{lstlisting}
+  \begin{itemize}
+    \item Same pipeline, tiny scale: sweep $\rightarrow$ score $\rightarrow$ NMS $\rightarrow$ one clean box.
+    \item That one box is exactly the crop Week 13's digit CNN expects.
+  \end{itemize}

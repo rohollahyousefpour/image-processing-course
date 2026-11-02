@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{The touching-objects problem}{4}{0}{1}
+\beamer@sectionintoc {2}{Watershed}{7}{0}{2}
+\beamer@sectionintoc {3}{Connected components}{15}{0}{3}
+\beamer@sectionintoc {4}{Evaluating a segmentation}{21}{0}{4}
+\beamer@sectionintoc {5}{Beyond classical}{25}{0}{5}
+\beamer@sectionintoc {6}{DocScan pipeline}{28}{0}{6}
+\beamer@sectionintoc {7}{Wrap-up}{31}{0}{7}

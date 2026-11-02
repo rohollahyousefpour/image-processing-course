@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{The histogram}{4}{0}{1}
+\beamer@sectionintoc {2}{Point operations}{10}{0}{2}
+\beamer@sectionintoc {3}{Contrast enhancement}{18}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{25}{0}{4}
+\beamer@sectionintoc {5}{Wrap-up}{28}{0}{5}

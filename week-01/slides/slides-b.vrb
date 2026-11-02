@@ -1,0 +1,14 @@
+\frametitle{\faPen ~In-class exercise (10 min)}
+\begin{infobox}[Predict, then run]
+    Write your answers down \emph{before} executing the cell.
+  \end{infobox}
+\begin{lstlisting}[language=Python]
+gray = np.array([[100, 150],[200, 250]], dtype=np.uint8)
+a = gray + 60          # (1) what are the four values?
+b = cv2.add(gray, 60)  # (2) and here?
+c = gray.mean()        # (3) what does this represent?
+\end{lstlisting}
+  \begin{enumerate}
+    \item Compute \code{a} by hand — watch the overflow. \quad 2. How does \code{b} differ?
+    \item What is \code{c}, and what would a very low \code{c} tell you about the image?
+  \end{enumerate}

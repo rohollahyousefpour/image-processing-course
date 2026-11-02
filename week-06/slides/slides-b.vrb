@@ -1,0 +1,13 @@
+\frametitle{Notch filter in code}
+\begin{lstlisting}[language=Python]
+F = np.fft.fftshift(np.fft.fft2(noisy))
+mag = 20*np.log(np.abs(F) + 1)             # inspect to find peaks
+H, W = noisy.shape; cy, cx = H//2, W//2
+Y, X = np.ogrid[:H, :W]
+notch = np.ones((H, W))
+for (py, px) in [(cy, cx+64), (cy, cx-64)]:  # both symmetric peaks
+    D = np.sqrt((X-px)**2 + (Y-py)**2)
+    notch[D <= 4] = 0                        # zero a small disc
+clean = np.abs(np.fft.ifft2(np.fft.ifftshift(F * notch)))
+\end{lstlisting}
+  \code{fft2} $\rightarrow$ zero the peak discs $\rightarrow$ \code{ifft2}. Same three-step workflow, targeted mask.

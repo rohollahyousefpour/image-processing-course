@@ -1,0 +1,10 @@
+\frametitle{The whole rectifier in code}
+\begin{lstlisting}[language=Python]
+# corners: 4 page corners found in the photo (ordered TL,TR,BR,BL)
+W, H = 800, int(800*1.414)
+dst = np.float32([[0,0],[W,0],[W,H],[0,H]])
+M = cv2.getPerspectiveTransform(corners, dst)
+scan = cv2.warpPerspective(photo, M, (W, H))
+# automatic variant: ORB matches -> cv2.findHomography(..., cv2.RANSAC)
+\end{lstlisting}
+  Four lines turn an angled photo into a flat scan — the heart of DocScan.

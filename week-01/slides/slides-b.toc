@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Images in code}{5}{0}{1}
+\beamer@sectionintoc {2}{In-class exercise}{13}{0}{2}
+\beamer@sectionintoc {3}{Formats \& storage}{16}{0}{3}
+\beamer@sectionintoc {4}{Deep dive: the imaging model}{21}{0}{4}
+\beamer@sectionintoc {5}{Wrap-up}{29}{0}{5}

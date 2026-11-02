@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Periodic noise \& notch filtering}{4}{0}{1}
+\beamer@sectionintoc {2}{Amplitude vs phase}{11}{0}{2}
+\beamer@sectionintoc {3}{The FFT \& the transform family}{14}{0}{3}
+\beamer@sectionintoc {4}{Aliasing \& lighting}{19}{0}{4}
+\beamer@sectionintoc {5}{In-class exercise}{24}{0}{5}
+\beamer@sectionintoc {6}{When to use it \& wrap-up}{27}{0}{6}

@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Positions, not values}{4}{0}{1}
+\beamer@sectionintoc {2}{The transform hierarchy}{7}{0}{2}
+\beamer@sectionintoc {3}{Homogeneous coordinates}{14}{0}{3}
+\beamer@sectionintoc {4}{The homography}{19}{0}{4}
+\beamer@sectionintoc {5}{In-class exercise}{25}{0}{5}
+\beamer@sectionintoc {6}{Pitfalls \& good practice}{28}{0}{6}
+\beamer@sectionintoc {7}{Wrap-up}{31}{0}{7}

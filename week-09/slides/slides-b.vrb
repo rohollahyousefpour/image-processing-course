@@ -1,0 +1,11 @@
+\frametitle{Contours in code — the full loop}
+\begin{lstlisting}[language=Python]
+cnts, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+digits = []
+for c in cnts:
+    x, y, w, h = cv2.boundingRect(c)
+    if cv2.contourArea(c) > 200 and 0.2 < w/h < 1.2:   # keep digit-like
+        digits.append((x, gray[y:y+h, x:x+w]))
+digits = [img for x, img in sorted(digits)]            # left-to-right
+\end{lstlisting}
+  Segment $\rightarrow$ contour $\rightarrow$ filter $\rightarrow$ crop $\rightarrow$ order. The DocScan hand-off, in seven lines.

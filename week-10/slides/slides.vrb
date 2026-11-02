@@ -1,0 +1,10 @@
+\frametitle{Features in code}
+\begin{lstlisting}[language=Python]
+orb = cv2.ORB_create(500)
+kp1, des1 = orb.detectAndCompute(img1, None)
+kp2, des2 = orb.detectAndCompute(img2, None)
+bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
+matches = sorted(bf.match(des1, des2), key=lambda m: m.distance)
+# next week: cv2.findHomography(pts1, pts2, cv2.RANSAC) to align
+\end{lstlisting}
+  Detect $\rightarrow$ describe $\rightarrow$ match $\rightarrow$ (Week 11) estimate the transform.

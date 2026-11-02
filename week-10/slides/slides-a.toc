@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{What makes a good feature}{4}{0}{1}
+\beamer@sectionintoc {2}{The Harris corner detector}{8}{0}{2}
+\beamer@sectionintoc {3}{From keypoint to descriptor}{21}{0}{3}
+\beamer@sectionintoc {4}{In-class exercise}{26}{0}{4}
+\beamer@sectionintoc {5}{Wrap-up}{29}{0}{5}

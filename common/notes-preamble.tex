@@ -1,0 +1,81 @@
+% ===================================================================
+%  Shared preamble for Persian lecture notes (Image Processing).
+%  Compile with XeLaTeX.  Body = Persian (RTL), code/math = LTR.
+% ===================================================================
+
+\usepackage{geometry}
+\geometry{a4paper,margin=2.4cm}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\tcbuselibrary{skins,breakable}
+
+% ---- Persian / RTL --------------------------------------------------
+\usepackage{xepersian}
+\settextfont{IRNazli}
+\setlatintextfont{Latin Modern Roman}
+\setdigitfont{IRNazli}
+% More generous leading + paragraph spacing (Persian reads better with air).
+\linespread{1.5}
+\setlength{\parskip}{0.7em}
+
+% ---- Colours --------------------------------------------------------
+\definecolor{coursePrimary}{HTML}{1B4965}
+\definecolor{courseAccent}{HTML}{E76F51}
+\definecolor{courseGood}{HTML}{2A9D8F}
+\definecolor{courseBad}{HTML}{C0392B}
+\definecolor{courseInfo}{HTML}{2980B9}
+\definecolor{codeBg}{HTML}{F5F6FA}
+\definecolor{codeKw}{HTML}{8E44AD}
+\definecolor{codeStr}{HTML}{2A9D8F}
+\definecolor{codeCom}{HTML}{7F8C8D}
+
+\hypersetup{colorlinks=true,linkcolor=courseInfo,urlcolor=courseInfo,citecolor=courseInfo}
+
+% ---- Code listings (Python built in) -------------------------------
+\lstdefinestyle{course}{
+  backgroundcolor=\color{codeBg},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{codeKw}\bfseries,
+  stringstyle=\color{codeStr},
+  commentstyle=\color{codeCom}\itshape,
+  numberstyle=\tiny\color{codeCom},
+  numbers=left, numbersep=7pt,
+  showstringspaces=false, breaklines=true,
+  tabsize=4, columns=fullflexible, frame=single,
+  rulecolor=\color{gray!30}, keepspaces=true, upquote=true, language=Python,
+}
+\lstset{style=course}
+\lstdefinelanguage{bash}{
+  keywords={cd,pip,python,venv,source,import}, sensitive=true,
+  morecomment=[l]{\#}, morestring=[b]', morestring=[b]",
+}
+\newenvironment{ltrcode}{\begin{LTR}}{\end{LTR}}
+
+% ---- Callout boxes (Persian titles) --------------------------------
+\newtcolorbox{yaddasht}{colback=courseInfo!8,colframe=courseInfo,
+  title={\textbf{یادداشت}},boxrule=0.6pt,right=6pt,left=6pt,breakable}
+\newtcolorbox{nokte}{colback=courseAccent!10,colframe=courseAccent,
+  title={\textbf{نکتهٔ کلیدی}},boxrule=0.6pt,right=6pt,left=6pt,breakable}
+\newtcolorbox{hoshdar}{colback=courseBad!8,colframe=courseBad,
+  title={\textbf{هشدار / دام}},boxrule=0.6pt,right=6pt,left=6pt,breakable}
+\newtcolorbox{riyazi}{colback=coursePrimary!6,colframe=coursePrimary,
+  title={\textbf{ریاضیات}},boxrule=0.6pt,right=6pt,left=6pt,breakable}
+\newtcolorbox{tamrin}{colback=courseGood!8,colframe=courseGood,
+  title={\textbf{تمرین}},boxrule=0.6pt,right=6pt,left=6pt,breakable}
+
+% ---- Header helper --------------------------------------------------
+\newcommand{\coursemeta}[2]{%
+  \begin{center}
+  {\large\textbf{پردازش تصویرِ کاربردی}}\\[2pt]
+  {\color{coursePrimary}\rule{\linewidth}{1pt}}\\[4pt]
+  {\Large\textbf{#1}}\\[3pt]
+  {\small جزوهٔ درس — #2}
+  \end{center}\vspace{4pt}
+}

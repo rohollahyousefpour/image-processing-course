@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}نگاهِ کلی به این جلسه}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}یک تشبیهِ ساده}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {2}از یک رقم به یک رشته}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}رویکردِ اول: برش، سپس طبقه‌بندی}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}ضربِ خطاها: تلهٔ استقلال}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}چرا برش سخت است}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}رویکردِ سرتاسری: ستون‌های ویژگی}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}مسئلهٔ ترازبندی}{5}{subsection.3.1}%
+\contentsline {section}{\numberline {4}معماریِ CRNN}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}مرحلهٔ ۱: CNN و ردیابیِ شکلِ تنسور}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}مرحلهٔ ۲: map-to-sequence}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}مرحلهٔ ۳: BiLSTM بافت می‌افزاید}{6}{subsection.4.3}%
+\contentsline {section}{\numberline {5}CTC: آموزش بدونِ ترازبندی}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}نمادِ بلنک، دقیق}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}مسیرهای بسیار، یک رشته}{7}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}ایدهٔ CTC: جمع روی همهٔ هم‌ترازی‌ها}{7}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}CTC با دست: مثالِ کوچک}{8}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}چرا این جمع محاسبه‌پذیر است}{8}{subsection.5.5}%
+\contentsline {section}{\numberline {6}کدگشایی و ارزیابی}{8}{section.6}%
+\contentsline {subsection}{\numberline {6.1}کدگشاییِ حریصانه (best-path)}{8}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}جستجوی پرتو (beam search)}{9}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}ارزیابی: نه فقط درست/غلط}{9}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}فاصلهٔ ویرایش با یک مثال}{10}{subsection.6.4}%
+\contentsline {section}{\numberline {7}کدِ CRNN + CTC در PyTorch}{10}{section.7}%
+\contentsline {section}{\numberline {8}تمرینِ کلاسی و پاسخ}{12}{section.8}%
+\contentsline {section}{\numberline {9}فهرستِ عیب‌یابیِ عملی}{12}{section.9}%
+\contentsline {section}{\numberline {10}جمع‌بندی}{13}{section.10}%

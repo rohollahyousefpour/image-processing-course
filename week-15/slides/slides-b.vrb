@@ -1,0 +1,21 @@
+\frametitle{Greedy decode + edit distance}
+\begin{lstlisting}[language=Python]
+def greedy_decode(logp, blank=10):          # logp: (T, n_classes)
+    path = logp.argmax(1).tolist()          # best class per column
+    out, prev = [], None
+    for c in path:
+        if c != prev and c != blank:        # merge repeats, drop blank
+            out.append(c)
+        prev = c
+    return out
+
+def edit_distance(a, b):                    # Levenshtein, DP table
+    D = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        prev, D[0] = D[0], i
+        for j, cb in enumerate(b, 1):
+            prev, D[j] = D[j], min(D[j] + 1, D[j-1] + 1,
+                                   prev + (ca != cb))
+    return D[-1]
+\end{lstlisting}
+  \code{greedy\_decode} is the collapse rule in six lines; \code{edit\_distance} is the recurrence from earlier.
